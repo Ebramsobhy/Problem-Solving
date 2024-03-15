@@ -11,12 +11,13 @@
 #include <cmath>
 using namespace std;
 
-float ReadPositiveNumber(string Message)
-{
-    float Number = 0;
-    cout << Message << endl;
-    cin >> Number;
-    return Number; 
+float ReadPositiveNumber(string message) {
+    float number;
+    do {
+        cout << message << endl;
+        cin >> number;
+    } while (number <= 0);
+    return number;
 }
 
 float TotalBillAfterServiceAndTax(float BillValue)
