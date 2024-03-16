@@ -1,6 +1,6 @@
 /*
    ================================================================================
-    Problem 42
+    Problem 43
     Write a program to takes input number of seconds and change it to days, hours,
     minutes and seconds.
    =================================================================================
