@@ -5,6 +5,7 @@
     - Day
     Then print the day as follows:
     [1- Sunday, 2- Monday, 3- Tuesday, 4- Wednesday, etc..]
+    - Otherwise print "Wrong Day" and ask the user to enter the day again.
    =================================================================================
 */
 
@@ -28,18 +29,22 @@ void ShowWeekDayMenu()
     cout << "6: Friday" << endl;
     cout << "7: Saturday" << endl;
     cout << "********************" << endl;
-    cout << "Please Enter The Number Of Day?" << endl;
 }
 
-enWeekDay ReadWeekDay()
+enWeekDay ReadWeekDay(string Message, int From, int To)
 {
     int wd;
-    cin >> wd;
+    do
+    {
+       cout << Message << endl;
+       cin >> wd;
+    } while (wd < From || wd > To);
+    
     return (enWeekDay)wd;
 }
 
 string GetWeekDayName(enWeekDay WeekDay)
-{
+{ 
     switch (WeekDay) {
         case enWeekDay::Sun:
         return "Sunday";
@@ -64,7 +69,7 @@ int main()
 {
     ShowWeekDayMenu();
 
-    string Day = GetWeekDayName(ReadWeekDay());
+    string Day = GetWeekDayName(ReadWeekDay("Enter Number Of Day", 1, 7));
     cout << "Today is " << Day << endl;
     return 0;
 }
