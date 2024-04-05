@@ -1,20 +1,12 @@
 /*
    ====================================================================================
     Problem 82
-    Write a program to dynamically read numbers and save them in an array
-    max size of array is 100, allocate simi-dynamic array length.
-    Output:
-        Please Enter a number ? 10
-        Do You want to add more numbers ? [0]:No , [1]:Yes 
-        1
-        Please Enter a number ? 20
-        Do You want to add more numbers ? [0]:No , [1]:Yes
-        1
-        Please Enter a number ? 30
-        Do You want to add more numbers ? [0]:No , [1]:Yes
-        0
-        Array Length : 3
-        Array Elements : 10 20 30
+    Write a program to fill array with max size 100 with random numbers from 1 to 100
+    then copy it to another array using AddArrayElement and print it.
+    Input: 10
+    Output: 
+        Array 1 Elements: 42 68 35 1 70 25 79 59 63 65 
+        Array 2 Elements: 42 68 35 1 70 25 79 59 63 65       
    ====================================================================================
 */
 
